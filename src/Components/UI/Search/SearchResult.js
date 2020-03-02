@@ -1,11 +1,11 @@
 import React from  'react';
 import Auxi from '../../../Hoc/Auxi';
 
-function SearchResult()
+function SearchResult(props)
 {
     return(
         <>
-            
+            {props.searchquery}
         </>
     )
 }
