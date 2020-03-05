@@ -1,8 +1,22 @@
 $navbar-color:#563d7c;
 
-.modreknavbar
-{
+.modreknavbar{
     background-color: $navbar-color;
     color:white;
+
+}
+
+.nav-item{
+    color: white;
+    background-color: $navbar-color;
+    
+}
+.nav-item :hover{
+    color: $navbar-color !important;
+    background-color: white !important;
+}
+.dropdown-menu{
+    box-shadow: yellow;
+    
 
 }

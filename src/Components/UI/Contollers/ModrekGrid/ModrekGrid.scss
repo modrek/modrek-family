@@ -1,0 +1,42 @@
+.modrekgrid{
+    border: solid 2px coral;
+
+}
+
+.modrekgrid-header{
+    /* border: solid 2px steelblue; */
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.modrekgrid-headercol{
+    padding: 5px 30px;
+    width: 200px;
+    text-align: center;
+    border: gray solid 1px;
+    cursor: pointer;
+    background-color:lightblue;
+    font-weight: bold;
+    display: flex;
+}
+
+
+.modrekgrid-row{
+    /* border: solid 2px steelblue; */
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.modrekgrid-datacol{
+    padding: 5px 30px;
+    width: 200px;
+
+    border: gray solid 1px;
+  
+}
+
+.modrekgrid-headercolMenu{
+    text-align: right;
+}

@@ -20,17 +20,17 @@ function Navbar()
             <nav className="navbar navbar-expand-sm ">              
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                    <NavLink className="nav-link" to="/Alerts" exact="true" >
+                    <NavLink className="nav-link " to="/Alerts"  >
                        Alerts
                     </NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to="/Community" exact="true" >
+                    <NavLink className="nav-link" to="/Community"  >
                        Community
                     </NavLink>                
                     </li>
                     <li className="nav-item">
-                    <NavLink className="nav-link" to="/Events" exact="true" >
+                    <NavLink className="nav-link" to="/Events"  >
                         Events
                     </NavLink> 
                     </li>
@@ -40,17 +40,17 @@ function Navbar()
                        User Name
                     </a>
                     <div className="dropdown-menu">
-                        <NavLink className="nav-link" to="/Accounts" exact="true" >  Accounts </NavLink>                    
-                        <NavLink className="nav-link" to="/Privacy" exact="true" >  Privacy </NavLink>                    
-                        <NavLink className="nav-link" to="/Help" exact="true" >  Help </NavLink>                    
-                        <NavLink className="nav-link" to="/Language" exact="true" >  Language </NavLink>  
+                        <NavLink className="nav-link" to="/Accounts"  >  Accounts </NavLink>                    
+                        <NavLink className="nav-link" to="/Privacy"  >  Privacy </NavLink>                    
+                        <NavLink className="nav-link" to="/Help"  >  Help </NavLink>                    
+                        <NavLink className="nav-link" to="/Language"  >  Language </NavLink>  
                         <hr/>                
-                        <NavLink className="nav-link" to="/Manage" exact="true" >  Manage </NavLink>                    
-                        <NavLink className="nav-link" to="/PostAndActivity" exact="true" >  Post & Activity </NavLink>                    
-                        <NavLink className="nav-link" to="/Events" exact="true" >  Events </NavLink>                    
-                        <NavLink className="nav-link" to="/Communities" exact="true" >  Communities </NavLink> 
+                        <NavLink className="nav-link" to="/Manage"  >  Manage </NavLink>                    
+                        <NavLink className="nav-link" to="/PostAndActivity"  >  Post & Activity </NavLink>                    
+                        <NavLink className="nav-link" to="/Events"  >  Events </NavLink>                    
+                        <NavLink className="nav-link" to="/Communities"  >  Communities </NavLink> 
                         <hr/>                     
-                        <NavLink className="nav-link" to="/Signout" exact="true" >  Sign out </NavLink>                    
+                        <NavLink className="nav-link" to="/Signout"  >  Sign out </NavLink>                    
                     </div>
                     </li>
                 </ul>
