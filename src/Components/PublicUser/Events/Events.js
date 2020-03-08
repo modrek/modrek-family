@@ -17,6 +17,7 @@ function  Events ()
   let commandlist= {new:true,edit:true,delete:true}
   let commandaction= {newaction:'',editaction:'',deleteaction:''}
   return( 
+    <div><h1>Events</h1>
       <ModrekGrid         
          url='api/Event/GetList1' 
          data={data}
@@ -26,7 +27,8 @@ function  Events ()
          commandaction={commandaction}
          inlineedit={true}
          inlinenew={true}>
-      </ModrekGrid>       
+      </ModrekGrid>    
+      </div>   
     );
 
 
