@@ -17,8 +17,9 @@ function ItemMenu (props){
             return '';
         }
       }
-
+    
     return(
+      
         <div className="modrekgrid-headercol" key={props.Key}>
         <div className="modrekgrid-headercolTitle">
         {props.headerName}

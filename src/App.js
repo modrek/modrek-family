@@ -6,6 +6,7 @@ import MainBody from './Components/UI/MainBody';
 import Communities from './Components/PublicUser/Communities/Communities';
 import Alerts from './Components/PublicUser/Alerts/Alerts';
 import Events from './Components/PublicUser/Events/Events';
+
 import { Route, Switch, withRouter, Redirect ,BrowserRouter } from 'react-router-dom';
 
 
@@ -19,8 +20,7 @@ function App() {
         <Switch>
                     <Route path="/Community" component={Communities} />   
                     <Route path="/Alerts" component={Alerts} />   
-                    <Route path="/Events" component={Events} />   
-                    
+                    <Route path="/Events" component={Events} />                                            
                     <Route path="/" component={MainBody} />         
          </Switch>         
         {/* <MainBody/> */}
