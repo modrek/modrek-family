@@ -1,0 +1,17 @@
+.searchresult{
+    background-color: white;
+    position: absolute;
+    color: black; 
+    border:  1px solid gray;
+    box-shadow: 3px 3px 5px grey;
+    z-index: 1;
+    border-radius: 5px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.hasvalue{
+    width: 521px;
+    min-height: 100px;
+    max-height: 350px;
+}

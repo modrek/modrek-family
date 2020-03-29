@@ -4,32 +4,31 @@ import ModrekGrid from '../../UI/Contollers/ModrekGrid/ModrekGrid';
 
 
 
-function  Events ()
-{
-  
-  let columnDefs= 
-  [
-      {headerName: 'eventID', field: 'eventID' , type:"number" ,visible:true,Id:true ,searchable:true},
-      {headerName: 'title', field: 'title' , type:"string" ,visible:true,Id:true ,searchable:true},
-      {headerName: 'description', field: 'description', type:"string" ,visible:true,Id:true ,searchable:true},
-  ];
-  let data={"PageIndex":1 , "PageSize":5 , "Expresstion":""}
-  let commandlist= {new:true,edit:true,delete:true}
-  let commandaction= {newaction:'',editaction:'',deleteaction:''}
-  return( 
-    <div><h1>Events</h1>
-      <ModrekGrid         
-         url='api/Event/GetList1' 
-         data={data}
-         method='post' 
-         columnDefs={columnDefs} 
-         commandlist={commandlist}
-         commandaction={commandaction}
-         inlineedit={true}
-         inlinenew={true}>
-      </ModrekGrid>    
-      </div>   
-    );
+function Events() {
+
+  let columnDefs =
+    [
+      { headerName: 'Evnet ID', field: 'eventID', type: "number", visible: true, Id: true, searchable: true },
+      { headerName: 'title', field: 'title', type: "string", visible: true, Id: true, searchable: true },
+      { headerName: 'description', field: 'description', type: "string", visible: true, Id: true, searchable: true },
+    ];
+  let data = { "PageIndex": 1, "PageSize": 5, "Expresstion": "" }
+  let commandlist = { new: true, edit: true, delete: true }
+  let commandaction = { newaction: '', editaction: '', deleteaction: '' }
+  return (
+    <div className="col-12"><h1>Events</h1>
+      <ModrekGrid
+        url='api/Event/GetList'
+        method='post'
+        data={data}
+        columnDefs={columnDefs}
+        commandlist={commandlist}
+        commandaction={commandaction}
+        inlineedit={true}
+        inlinenew={true}>
+      </ModrekGrid>
+    </div>
+  );
 
 
   //  axios.post('http://localhost:64001/api/Event/GetList1'
@@ -52,7 +51,7 @@ function  Events ()
   //   // always executed
   // });
 
-          
+
 }
 
 

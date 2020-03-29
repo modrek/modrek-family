@@ -1,0 +1,43 @@
+$userbardbackgroundcolor :lightblue;
+$userimgbackground :coral;
+$columnbordercolor:gray;
+
+.userboard{
+    background-color: $userbardbackgroundcolor;
+    height: 80vh;
+    
+}
+
+.userinfo{
+    background-color: $userimgbackground;
+    padding: 11px;
+    margin: -8px -8px -8px -8px;
+    height: 70px;
+    
+}
+.userimg{
+    background-image: url("../../../Imgs/Users/no-user.png");
+    background-repeat:no-repeat ;
+    background-size: 100px 100px;
+    display:block;
+    margin:auto;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    
+    // position: absolute;
+    // bottom: 0;
+    
+}
+
+.board{
+    
+    padding: 45px 0 0 0 ;    
+    
+}
+
+.username{
+    
+    text-align: center;
+    
+}

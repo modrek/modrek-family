@@ -7,7 +7,7 @@ function  Communities ()
    
     let columnDefs= 
     [
-        {headerName: 'eventID', field: 'eventID' , type:"number" ,visible:true,Id:true ,searchable:true},
+        {headerName: 'communityID', field: 'communityID' , type:"number" ,visible:true,Id:true ,searchable:true},
         {headerName: 'title', field: 'title' , type:"string" ,visible:true,Id:true ,searchable:true},
         {headerName: 'description', field: 'description', type:"string" ,visible:true,Id:true ,searchable:true},
     ];
@@ -15,9 +15,9 @@ function  Communities ()
     let commandlist= {new:true,edit:true,delete:true}
     let commandaction= {newaction:'',editaction:'',deleteaction:''}
     return( 
-        <div> <h1>Communities</h1>
+        <div className="col-12"> <h1>Communities</h1>
         <ModrekGrid         
-           url='api/Event/GetList' 
+           url='api/Community/GetList' 
            data={data}
            method='post' 
            columnDefs={columnDefs} 

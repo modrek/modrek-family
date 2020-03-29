@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    //baseURL: 'http://localhost:64001/'
-    baseURL:'http://modrekfamily.azurewebsites.net/'
+    baseURL: 'http://localhost:64001/'
+    //baseURL:'http://modrekfamily.azurewebsites.net/'
 });
 
 // instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';

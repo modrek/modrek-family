@@ -14,7 +14,7 @@ function  Alerts ()
   let commandlist= {new:true,edit:true,delete:true}
   let commandaction= {newaction:'',editaction:'',deleteaction:''}
   return( 
-      <div> <h1>Alert</h1>
+      <div className="col-12"> <h1>Alert</h1>
       <ModrekGrid               
          url='api/Event/GetList1' 
          data={data}

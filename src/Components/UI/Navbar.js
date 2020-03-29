@@ -1,5 +1,4 @@
 import React from 'react';
-import Auxi from '../../Hoc/Auxi';
 import Search from '../UI/Search/Search';
 import Logo from '../UI/Logo/Logo'; 
 import './Navbar.scss';
@@ -19,6 +18,11 @@ function Navbar()
 
             <nav className="navbar navbar-expand-sm ">              
                 <ul className="navbar-nav">
+                <li className="nav-item">
+                    <NavLink className="nav-link " to="/"  >
+                       Home
+                    </NavLink>
+                    </li>
                     <li className="nav-item">
                     <NavLink className="nav-link " to="/Alerts"  >
                        Alerts
@@ -40,17 +44,17 @@ function Navbar()
                        User Name
                     </a>
                     <div className="dropdown-menu">
-                        <NavLink className="nav-link" to="/Accounts"  >  Accounts </NavLink>                    
-                        <NavLink className="nav-link" to="/Privacy"  >  Privacy </NavLink>                    
-                        <NavLink className="nav-link" to="/Help"  >  Help </NavLink>                    
-                        <NavLink className="nav-link" to="/Language"  >  Language </NavLink>  
+                        <NavLink className="nav-link dropdownlink" to="/Accounts"  >  Accounts </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Privacy"  >  Privacy </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Help"  >  Help </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Language"  >  Language </NavLink>  
                         <hr/>                
-                        <NavLink className="nav-link" to="/Manage"  >  Manage </NavLink>                    
-                        <NavLink className="nav-link" to="/PostAndActivity"  >  Post & Activity </NavLink>                    
-                        <NavLink className="nav-link" to="/Events"  >  Events </NavLink>                    
-                        <NavLink className="nav-link" to="/Communities"  >  Communities </NavLink> 
+                        <NavLink className="nav-link dropdownlink" to="/Manage"  >  Manage </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/PostAndActivity"  >  Post & Activity </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Events"  >  Events </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Community"  >  Communities </NavLink> 
                         <hr/>                     
-                        <NavLink className="nav-link" to="/Signout"  >  Sign out </NavLink>                    
+                        <NavLink className="nav-link dropdownlink" to="/Signout"  >  Sign out </NavLink>                    
                     </div>
                     </li>
                 </ul>

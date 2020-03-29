@@ -1,6 +1,10 @@
+$gridheaderbackgroundcolor :lightblue;
+$gridbordercolor :coral;
+$columnbordercolor:gray;
 .modrekgrid{
-    border: solid 2px coral;
-
+    border: solid 2px $gridbordercolor;
+    height: 350px;
+ width: 100%;
 }
 
 .modrekgrid-header{
@@ -10,13 +14,24 @@
     
 }
 
+.modrekgrid-footer{
+    
+    display: flex;
+    justify-content: flex-start;   
+   // width: 100%;
+    height: 40px;
+    border: solid 1px $columnbordercolor;
+    background-color: $gridheaderbackgroundcolor
+    
+}
+
 .modrekgrid-headercol{
     padding: 5px 30px;
     width: 200px;
     text-align: center;
-    border: gray solid 1px;
+    border: solid 1px $columnbordercolor;
     cursor: pointer;
-    background-color:lightblue;
+    background-color:$gridheaderbackgroundcolor;
     font-weight: bold;
     display: flex;
 }
@@ -32,8 +47,7 @@
 .modrekgrid-datacol{
     padding: 5px 30px;
     width: 200px;
-
-    border: gray solid 1px;
+    border: solid 1px $columnbordercolor; 
   
 }
 

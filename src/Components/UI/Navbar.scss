@@ -11,12 +11,28 @@ $navbar-color:#563d7c;
     background-color: $navbar-color;
     
 }
-.nav-item :hover{
+
+.nav-link{
+    color: white;   
+}
+
+
+.nav-item  :hover{
     color: $navbar-color !important;
     background-color: white !important;
 }
 .dropdown-menu{
-    box-shadow: yellow;
     
+    box-shadow: 3px 3px 5px grey;
+    margin-left: -45px;
 
+}
+
+.dropdownlink{
+    color: $navbar-color;
+
+}
+.dropdownlink:hover{
+    color: white !important;
+    background-color: $navbar-color !important;
 }

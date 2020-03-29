@@ -1,13 +1,23 @@
-import React from  'react';
-import Auxi from '../../../Hoc/Auxi';
+import React,{ Component} from  'react';
+import './SearchResult.scss'
 
-function SearchResult(props)
-{
-    return(
-        <>
-            {props.searchquery}
-        </>
-    )
+
+
+class SearchResult extends Component{
+
+    shoot() {
+      
+      }
+    render(){
+        let classname="searchresult ";
+        if (this.props.searchquery)
+        classname=classname+" hasvalue";
+        return(
+            <div className={classname} onClick={this.shoot} >
+                {this.props.searchquery}
+               
+            </div>
+        )
+    }
 }
-
 export default SearchResult;

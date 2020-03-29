@@ -1,11 +1,11 @@
 import React from 'react';
+import Posts from './Posts';
 
-
-function Wall()
-{
-    return(
-        <div className="col-6 bg-secondary p-2">
-            Wall
+function Wall() {
+    return (
+        <div className="col-12">
+            <h2>Wall</h2>
+            <Posts></Posts>
         </div>
 
     )

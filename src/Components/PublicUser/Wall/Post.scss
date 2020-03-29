@@ -1,0 +1,31 @@
+.post{
+min-width: 100px;
+min-height: 100px;
+padding: 5px;
+margin: 5px;
+border: 1px solid cadetblue;
+border-radius: 2px;
+}
+
+.post:hover{
+cursor: pointer;    
+box-shadow: 3px 3px 5px grey;
+}
+
+
+.text{
+    background-color:gray ;
+}
+
+.voice{
+    background-color:burlywood ;
+}
+
+.video{
+    background-color:yellow ;
+}
+.image{
+    background-color:red ;
+}
+       
+       
