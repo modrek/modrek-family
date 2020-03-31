@@ -1,0 +1,27 @@
+.ad{
+    height:100px ;
+    transition:  height 2s;
+    border: 1px solid rgb(233, 50, 100);
+    padding: 5px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: hotpink;
+    overflow: hidden;
+    
+}
+
+.ad:hover{
+    cursor: pointer;
+    //box-shadow: 2px 3px 6px white; rgb(233, 162, 198);
+    height:250px ;
+    
+}
+.ad-header::first-letter{
+    text-transform: capitalize;
+    font-size: 35px ;
+    font-weight: bold;
+    color: red;
+    text-shadow: 2px 2px 4px white ;
+    font-family: "Sentinel SSm A";
+
+}

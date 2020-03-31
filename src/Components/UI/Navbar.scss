@@ -9,17 +9,21 @@ $navbar-color:#563d7c;
 .nav-item{
     color: white;
     background-color: $navbar-color;
-    
+    transition: border-bottom 2ms;
 }
 
 .nav-link{
-    color: white;   
+    color: white;       
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
 }
 
 
 .nav-item  :hover{
-    color: $navbar-color !important;
-    background-color: white !important;
+    // color: $navbar-color !important;
+    // background-color: white !important;
+    background-color: #786792 !important;
 }
 .dropdown-menu{
     
@@ -36,3 +40,10 @@ $navbar-color:#563d7c;
     color: white !important;
     background-color: $navbar-color !important;
 }
+.nav-item a:hover,
+.nav-item a:active,
+    .nav-item a.active {
+        background-color: #786792;
+        border-bottom: 4px solid #40A4C8;
+        color: white;
+    }

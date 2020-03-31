@@ -15,7 +15,7 @@ import Language from './Components/UI/Language/Language'
 import Manage from './Components/UI/Manage/Manage'
 import PostAndActivity from './Components/UI/PostAndActivity/PostAndActivity'
 import Privacy from './Components/UI/Privacy/Privacy'
-
+import Login from './Components/UI/Accounts/Login/Login'
 import { Route, Switch, withRouter, Redirect ,BrowserRouter } from 'react-router-dom';
 
 
@@ -36,14 +36,14 @@ function App() {
                     <Route path="/Accounts" component={Accounts} />                                            
                     <Route path="/Help" component={Help} />                                            
                     <Route path="/Language" component={Language} />                                            
-                    <Route path="/Manage" component={Manage} />                                            
+                    <Route path="/Manage" component={Manage} />    
+                    <Route path="/Login" component={Login} />                                           
                     <Route path="/PostAndActivity" component={PostAndActivity} />                                            
                     <Route path="/Privacy" component={Privacy} />                                            
                     <Route path="/" component={Wall} />         
          </Switch>   
          </div>      
-         <Ads></Ads>
-        {/* <MainBody/> */}
+         <Ads></Ads>        
         </div>
       </BrowserRouter>
       </div>
