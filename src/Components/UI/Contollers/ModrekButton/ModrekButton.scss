@@ -40,5 +40,51 @@
 
 
 .Danger {
-    color: #944317;
+    color: red;
+    transition: color 1s;
+    transition: background-color 1s;
 }
+.Danger:hover {
+    color: white;
+    background-color: red;   
+ }
+
+ .New {
+    color: #5C9210;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+.New:hover {
+    color: white;
+    background-color: #5C9210;   
+ }
+
+ .Edit {
+    color: black;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+.Edit:hover {
+    color: black;
+    background-color: skyblue;   
+ }
+
+ .Details {
+    color: gray;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+.Details:hover {
+    color: white;
+    background-color: gray;   
+ }
+
+ .Delete {
+    color: red;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+.Delete:hover {
+    color: white;
+    background-color: red;   
+ }

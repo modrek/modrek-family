@@ -8,7 +8,7 @@ function ItemMenu (props){
 
     function renderSwitch(type) {
         switch(type) {
-          case 'string':
+          case 'text':
             return '--s--';
           case 'number':
              return '--n--';

@@ -3,7 +3,7 @@ import './ModrekInput.scss';
 
 function ModrekInput(props)
 {
-    console.log(props);
+    //console.log(props);
     let inputElement = null;
     const inputClasses = ["InputElement"];
     
