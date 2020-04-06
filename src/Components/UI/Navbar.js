@@ -3,14 +3,15 @@ import Search from '../UI/Search/Search';
 import Logo from '../UI/Logo/Logo';
 import './Navbar.scss';
 import { NavLink } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 
 function Navbar() {
 
+    const store = useSelector(store => store)
     let menuItemsobj = [
         { title: "Login", url: "/Login" }];
     let drpdown = null;
-    if (1 == 1)//Authenticate
+    if (store.userToken)//Authenticate
     {
         menuItemsobj = [
             { title: "Home", url: "/" },
@@ -56,7 +57,7 @@ function Navbar() {
     let menuitems = menuItemsobj.map((itm, index) => {
         return (
             <li key={index} className="nav-item">
-                <NavLink className="nav-link " to={itm.url}  >
+                <NavLink className="nav-link " to={itm.url} exact >
                     {itm.title}
                 </NavLink>
             </li>
@@ -83,5 +84,6 @@ function Navbar() {
         </div>
     )
 }
+
 
 export default Navbar;

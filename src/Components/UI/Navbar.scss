@@ -15,7 +15,7 @@ $navbar-color:#563d7c;
 .nav-link{
     color: white;       
     height: 100%;
-    padding: 16px 10px;
+    padding: 6px 10px;
     border-bottom: 4px solid transparent;
 }
 
@@ -23,7 +23,6 @@ $navbar-color:#563d7c;
 .nav-item  :hover{
     // color: $navbar-color !important;
     // background-color: white !important;
-    background-color: #786792 !important;
 }
 .dropdown-menu{
     

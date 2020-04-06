@@ -26,7 +26,7 @@ $columnbordercolor:gray;
 }
 
 .modrekgrid-headercol{
-    padding: 5px 30px;
+    padding: 5px ;
     width: 200px;
     text-align: center;
     border: solid 1px $columnbordercolor;
@@ -34,6 +34,7 @@ $columnbordercolor:gray;
     background-color:$gridheaderbackgroundcolor;
     font-weight: bold;
     display: flex;
+    justify-content: space-between;
 }
 
 
