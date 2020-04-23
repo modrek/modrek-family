@@ -78,7 +78,7 @@ class ModrekGrid extends Component {
     render() {
 
         let obj = this.props.columnDefs['contoller'];
-        console.log('onj', obj);
+        //console.log('onj', obj);
         // var result = Object.keys(obj).map(function(key) {
         //     return [Number(key), obj[key]];
         //   });

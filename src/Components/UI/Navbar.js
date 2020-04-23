@@ -29,7 +29,7 @@ function Navbar() {
             { title: "PostAndActivity", url: "/Post & Activity" },
             { title: "Events", url: "/Events" },
             { title: "Community", url: "/Community" },
-            { title: "Signout", url: "/Signout" },
+            // { title: "Signout", url: "/Signout" },
 
 
         ];
@@ -38,9 +38,14 @@ function Navbar() {
         let drpmenuitems =
             drpitemsobj.map((itm, index) => {
                 return (
-                    <NavLink key={index} className="nav-link dropdownlink" to={itm.url}  >  {itm.title} </NavLink>
+                    <NavLink key={index} className="nav-link dropdownlink" to={itm.url} >  {itm.title} </NavLink>
                 )
             });
+
+        function logout() {
+            localStorage.removeItem('token');
+            store.userToken = "";
+        };
         drpdown =
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -48,6 +53,7 @@ function Navbar() {
         </a>
                 <div className="dropdown-menu">
                     {drpmenuitems}
+                    <NavLink className="nav-link dropdownlink" to='/' onClick={logout} >  Signout</NavLink>
                 </div>
             </li>
 
@@ -63,6 +69,7 @@ function Navbar() {
             </li>
         )
     });
+
 
 
     return (

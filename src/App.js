@@ -17,11 +17,11 @@ import PostAndActivity from './Components/UI/PostAndActivity/PostAndActivity'
 import Privacy from './Components/UI/Privacy/Privacy'
 import Login from './Components/UI/Accounts/Login/Login'
 import { Route, Switch, withRouter, Redirect, BrowserRouter } from 'react-router-dom';
+import * as Auth from './Components/UI/Accounts/Login/Auth';
 import { useSelector } from 'react-redux';
 
-
 function App() {
-  const store = useSelector(state => state);
+  const store = useSelector(store => store)
   let content = <div className="App">
     <div className="container-full ">
 
@@ -39,6 +39,11 @@ function App() {
       </BrowserRouter>
     </div>
   </div>
+
+  if (!store.userToken) {
+    store.userToken = localStorage.getItem('token');
+  }
+  console.log(store.userToken);
 
   if (store.userToken) {
     content = <div className="App">

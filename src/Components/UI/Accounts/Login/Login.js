@@ -51,8 +51,8 @@ class Login extends Component {
 
     }
 
-    componentDidMount (){
-        console.log('componentDidMount', this.props.userName);
+    componentDidMount() {
+        // console.log('componentDidMount', this.props.userName);
     }
     render() {
 
@@ -89,13 +89,13 @@ class Login extends Component {
             />
         ));
 
-        
+
         return (
             <div className="col-8 p-2 login">
                 {this.props.userName}
                 {form}
                 <ModrekButton
-                    clicked={()=>this.props.onStartLogin(this.state.contoller.username.value)}
+                    clicked={() => this.props.onStartLogin(this.state.contoller.username.value)}
                     // btnType="Success">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</ModrekButton>
                     btnType="Success">SIGNIN</ModrekButton>
             </div>
@@ -111,10 +111,10 @@ const mapStateToProps = state => {
     };
 }
 const mapDispatchToProps = (dispatch) => {
-    
+
     return {
-        onStartLogin: (userName) => dispatch({ type: "START_LOGIN", userName:userName })
-        
+        onStartLogin: (userName) => dispatch({ type: "START_LOGIN", userName: userName })
+
     }
 
 }
