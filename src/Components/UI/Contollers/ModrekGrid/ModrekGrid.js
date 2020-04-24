@@ -75,6 +75,8 @@ class ModrekGrid extends Component {
         this.setState({ shownew: false, showedit: false, showdetails: false, showdelete: false });
     }
 
+
+
     render() {
 
         let obj = this.props.columnDefs['contoller'];
@@ -128,14 +130,14 @@ class ModrekGrid extends Component {
                 type="New"
                 columnDefs={this.props.columnDefs}
                 oncancel={() => this.oncancelclickhandler}
-                onsave=""></CRUDFrom>;
+                onsave={() => this.onsaveclickhandler}></CRUDFrom>;
 
         if (this.state.showedit)
             commadform = <CRUDFrom
                 type="Edit"
                 columnDefs={this.props.columnDefs}
                 oncancel={() => this.oncancelclickhandler}
-                onsave=""></CRUDFrom>;
+                onsave={() => this.oneditclickhandler}></CRUDFrom>;
 
         if (this.state.showdetails)
             commadform = <CRUDFrom

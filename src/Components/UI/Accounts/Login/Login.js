@@ -95,7 +95,7 @@ class Login extends Component {
                 {this.props.userName}
                 {form}
                 <ModrekButton
-                    clicked={() => this.props.onStartLogin(this.state.contoller.username.value)}
+                    clicked={() => this.props.onStartLogin(this.state.contoller.username.value, this.state.contoller.password.value)}
                     // btnType="Success">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</ModrekButton>
                     btnType="Success">SIGNIN</ModrekButton>
             </div>
@@ -107,13 +107,14 @@ class Login extends Component {
 
 const mapStateToProps = state => {
     return {
-        userName: state.userName
+        userName: state.userName,
+        password: state.password
     };
 }
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        onStartLogin: (userName) => dispatch({ type: "START_LOGIN", userName: userName })
+        onStartLogin: (userName, password) => dispatch({ type: "START_LOGIN", userName: userName, password: password })
 
     }
 

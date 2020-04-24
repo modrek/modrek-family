@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+
 import ModrekButton from '../../ModrekButton/ModrekButton';
 import ModrekInput from '../../ModrekInput/ModrekInput';
 import checkValidity from '../../../Utility/Utility';
+
+import axios from 'axios';
 
 
 class CRUDFrom extends Component {
@@ -22,19 +25,34 @@ class CRUDFrom extends Component {
             this.setState({ controller })
 
         }
+        this.saveClickHandler = (formData) => {
+            let collectionName = 'Comunities';
+            let f = { Title: 'test1', Description: 'tost1' }
+            console.log(1212);
 
+            // axios.post('https://modrek-family.firebaseio.com/' + collectionName + '.json', f)
+            //     .then(response => {
+            //         // console.log(response.data);
+
+            //         //dispatch(purchaseBurgerSuccess(response.data.name, orderData));
+            //     })
+            //     .catch(error => {
+            //         console.log(error);
+            //         //dispatch(purchaseBurgerFail(error));
+            //     });
+        }
 
         const formElementsArray = [];
         for (let key in this.state.contoller) {
             if (!this.state.contoller[key].key)
-            formElementsArray.push({
-                id: key,
-                config: this.state.contoller[key]
-            });
+                formElementsArray.push({
+                    id: key,
+                    config: this.state.contoller[key]
+                });
         }
 
 
-        let form = formElementsArray.map(formElement => (                     
+        let form = formElementsArray.map(formElement => (
             <ModrekInput
                 key={formElement.id}
                 elementType={formElement.config.elementType}
@@ -45,7 +63,7 @@ class CRUDFrom extends Component {
                 touched={formElement.config.touched}
                 label={formElement.config.label}
                 changed={(event) => this.inputChangedHandler(event, formElement.id)} >
-                    </ModrekInput>                              
+            </ModrekInput>
         )
         );
 
@@ -55,11 +73,11 @@ class CRUDFrom extends Component {
 
             <div>
                 <h2>{this.props.type} Data</h2>
-        
+
                 {form}
 
                 <ModrekButton
-                    clicked={this.props.oncancel()}
+                    clicked={() => this.saveClickHandler('tesst')}
                     btnType="Success">Save </ModrekButton>
                 <ModrekButton
                     clicked={this.props.oncancel()}

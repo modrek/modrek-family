@@ -1,5 +1,6 @@
 import * as actionTypes from './UserActionTypes';
 import { act } from 'react-dom/test-utils';
+import axios from 'axios';
 
 const initialState = {
     userId: 'm_modrek@yahoo.com',
@@ -10,21 +11,43 @@ const initialState = {
     userPic: '',
     exprieDate: '',
 }
+
 const reducer = ((state = initialState, action) => {
+
     if (action.type === 'START_LOGIN') {
-        let userToken = "1234";
-        console.log('loginnnnnnnnnn');
-        localStorage.setItem('token', userToken);
-        return {
-            ...state,
-            userName: action.userName,
-            userToken: userToken
+        let AuthData = {
+            email: action.userName,
+            password: action.password,
+            returnSecureToken: true
 
         }
+        const API_KEY = "AIzaSyC6V88usZ9_Btp9cRqqu0mYld2i2k2YaRk";
+        axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" + API_KEY, AuthData)
+            .then(response => {
+                let userToken = response.data.idToken;
+                localStorage.setItem('token', userToken);
+                // console.log('[username]', action.userName);
+                // console.log('[password]', action.password);
+                // console.log('[token]', userToken);
+
+                return {
+                    ...state,
+                    userName: action.userName,
+                    userToken: userToken
+
+                }
+
+            }).catch(error => {
+                console.log(error.message);
+
+            });
+
+
+
     }
     if (action.type === 'AUTH_LOGOUT') {
         let userToken = "";
-        console.log('logooooooooooooout');
+
         localStorage.removeItem('token', userToken);
         return {
             ...state,

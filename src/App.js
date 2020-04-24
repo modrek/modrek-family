@@ -43,7 +43,7 @@ function App() {
   if (!store.userToken) {
     store.userToken = localStorage.getItem('token');
   }
-  console.log(store.userToken);
+  // console.log(store.userToken);
 
   if (store.userToken) {
     content = <div className="App">
